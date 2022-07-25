@@ -9,6 +9,7 @@ import { DocumentCardDirective } from './document-card.directive';
 import { ButtonActionsComponent } from './button-actions/button-actions.component';
 import { DocPlatporCurrCardComponent } from './doc-platpor-curr-card/doc-platpor-curr-card.component';
 import { DocPlatporCardComponent } from './doc-platpor-card/doc-platpor-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DocPlatporCardComponent } from './doc-platpor-card/doc-platpor-card.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

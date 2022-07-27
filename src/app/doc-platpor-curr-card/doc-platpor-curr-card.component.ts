@@ -14,6 +14,10 @@ export class DocPlatporCurrCardComponent implements OnInit, IBaseCard {
   ngOnInit(): void {
   }
 
-  document: DocumentResponseTypes;
+  document: any = {
+    "@type": '',
+    accConto: '',
+    
+  };
 
 }

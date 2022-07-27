@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'online.metib.ru/api'
+  url: 'https://testonlineul.metib.ru/rest/stateful/corp',
 };
 
 /*

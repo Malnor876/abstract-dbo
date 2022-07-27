@@ -1,0 +1,23 @@
+<mat-card *documentCard="document">
+  <button
+    mat-icon-button
+    aria-label="Example icon button with a vertical three dot icon"
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Подписать</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Редактировать</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Копировать</span>
+      </button>
+    </mat-menu>
+  </button>
+</mat-card>

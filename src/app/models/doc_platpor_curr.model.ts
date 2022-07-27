@@ -8,8 +8,8 @@ export interface IDocPlatporCurr {
   swiftMessage: string
 }
 export interface IDocPlatporCurrResponse extends IDocPlatporCurr, AbstractDocumentResponse {
-  doc_type: EDocType.Platpor_curr,
-  doc_module: EDocModule.IBank_Ul_Curr,
+  docType: EDocType.Platpor_curr,
+  docModule: EDocModule.IBank_Ul_Curr,
   swiftMessage: string
 }
 

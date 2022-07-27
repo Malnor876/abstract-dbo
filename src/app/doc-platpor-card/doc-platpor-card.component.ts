@@ -1,19 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {IBaseCard} from "../document-card.directive";
-import {DocumentResponseTypes} from "../models/document.model";
+import { IBaseCard } from '../document-card.directive';
+import { DocumentResponseTypes } from '../models/document.model';
 
 @Component({
   selector: 'app-doc-platpor-card',
   templateUrl: './doc-platpor-card.component.html',
-  styleUrls: ['./doc-platpor-card.component.scss']
+  styleUrls: ['./doc-platpor-card.component.scss'],
 })
 export class DocPlatporCardComponent implements OnInit, IBaseCard {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  document: DocumentResponseTypes;
-
+  document: any;
 }

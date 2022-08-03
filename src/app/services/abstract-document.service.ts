@@ -1,9 +1,9 @@
 import { Observable } from 'rxjs';
-import { ApiService, ILastDocumentsFullWithActions } from './api.service';
+import { ApiService, ILastDocumentsFullWithActions } from '../api.service';
 import {
   DocumentFormTypes,
   DocumentResponseTypes,
-} from './models/document.model';
+} from '../models/document.model';
 
 export class AbstractDocumentService<
   T extends DocumentResponseTypes,
@@ -11,8 +11,16 @@ export class AbstractDocumentService<
 > {
   constructor(protected apiService: ApiService) {}
 
-  public getDocumentById(id: string, doc_type: T['docType']): Observable<T> {
-    return this.apiService.get<T>('');
+  public getDocumentById(
+    id: string,
+    docType: T['docType'],
+    docModule: T['docModule']
+  ): Observable<T> {
+    return this.apiService.get<T>('document/visual/byid', {
+      doc_ids: id,
+      doc_type: docType,
+      doc_module: docModule,
+    });
   }
 
   public getDocumentList(

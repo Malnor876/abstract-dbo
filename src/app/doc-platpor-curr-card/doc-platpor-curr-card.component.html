@@ -1,1 +1,7 @@
-<p>doc-platpor-curr-card works!</p>
+<div>
+  <p>Валютный перевод {{ document.accNumber }} {{ document.amount }}</p>
+  <p>
+    {{ document.description }} {{ document.statusCaption | titlecase }}
+    {{ document.signStatusCaption }}
+  </p>
+</div>

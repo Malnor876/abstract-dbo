@@ -1,0 +1,19 @@
+<mat-card *documentCard="documentWithActions.document">
+  <button
+    mat-icon-button
+    aria-label="Example icon button with a vertical three dot icon"
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button
+        mat-menu-item
+        *ngFor="let action of documentWithActions.actions"
+        (click)="handleClickAction(action)"
+      >
+        <mat-icon>{{ action }}</mat-icon>
+        <span>{{ action }}</span>
+      </button>
+    </mat-menu>
+  </button>
+</mat-card>

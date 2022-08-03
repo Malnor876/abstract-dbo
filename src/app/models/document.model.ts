@@ -4,7 +4,6 @@ import {
   IDocPlatporResponse,
 } from './doc_platpor.model';
 import {
-  IDocPlatporCurr,
   IDocPlatporCurrForm,
   IDocPlatporCurrResponse,
 } from './doc_platpor_curr.model';
@@ -15,8 +14,8 @@ export enum EDocType {
   Dealpass = 'dealpass',
 }
 export const enum EDocModule {
-  IBank_Ul = 'ibank_ul',
-  IBank_Ul_Curr = 'ibank_ul_curr',
+  IBank_Ul = 'ibankul',
+  IBank_Ul_Curr = 'ibankul_curr',
 }
 export interface AbstractDocumentResponse {
   '@type': string;
@@ -33,12 +32,11 @@ export interface AbstractDocumentResponse {
   createStamp: Date;
 }
 
-export const enum Actions {
+export const enum EActions {
   COPY = 'copy',
   SIGN = 'sign',
   PRINT = 'print',
 }
-export type DocumentTypes = IDocPlatpor | IDocPlatporCurr;
 export type DocumentResponseTypes =
   | IDocPlatporResponse
   | IDocPlatporCurrResponse;

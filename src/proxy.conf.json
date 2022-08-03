@@ -1,0 +1,6 @@
+{
+  "/rest": {
+    "target": "https://testonlineul.metib.ru",
+    "secure": false
+  }
+}

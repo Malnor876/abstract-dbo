@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'https://testonlineul.metib.ru/rest/stateful/corp',
+  url: 'http://localhost:4200/rest/stateful/corp/',
 };
 
 /*

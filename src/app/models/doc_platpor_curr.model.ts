@@ -1,16 +1,26 @@
+import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
+import {
+  AbstractDocumentResponse,
+  EDocModule,
+  EDocType,
+} from './document.model';
 
-import {AbstractDocumentResponse, EDocModule, EDocType} from "./document.model";
+export type IDocPlatporCurrResponse = AbstractDocumentResponse & {
+  docType: EDocType.Platpor_curr;
+  docModule: EDocModule.IBank_Ul_Curr;
+  amount: string | number;
+  accNumber: string | number;
+  description: string;
+  swift: string;
+};
 
-export interface IDocPlatporCurr {
-  amount: string | number,
-  accNumber: string | number,
-  corrAccNumber: string | number,
-  swiftMessage: string
-}
-export interface IDocPlatporCurrResponse extends IDocPlatporCurr, AbstractDocumentResponse {
-  docType: EDocType.Platpor_curr,
-  docModule: EDocModule.IBank_Ul_Curr,
-  swiftMessage: string
-}
+export type IDocPlatporCurrForm = Required<
+  Omit<IDocPlatporCurrResponse, 'swift' | keyof AbstractDocumentResponse>
+>;
 
-export type IDocPlatporCurrForm = Required<Omit<IDocPlatporCurr, 'swiftMessage'>>
+type example = {
+  id: string;
+  docType: string;
+};
+
+type actions = 'send' | 'end';

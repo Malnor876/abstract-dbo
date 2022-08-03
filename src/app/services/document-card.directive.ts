@@ -7,9 +7,9 @@ import {
   Type,
   ViewContainerRef,
 } from '@angular/core';
-import { DocumentResponseTypes, EDocType } from './models/document.model';
-import { DocPlatporCurrCardComponent } from './doc-platpor-curr-card/doc-platpor-curr-card.component';
-import { DocPlatporCardComponent } from './doc-platpor-card/doc-platpor-card.component';
+import { DocPlatporCardComponent } from '../doc-platpor-card/doc-platpor-card.component';
+import { DocPlatporCurrCardComponent } from '../doc-platpor-curr-card/doc-platpor-curr-card.component';
+import { DocumentResponseTypes } from '../models/document.model';
 
 export interface IBaseCard {
   document: DocumentResponseTypes;
@@ -35,7 +35,6 @@ export class DocumentCardDirective implements OnInit {
       const embViewRef = this.viewContainerRef.createEmbeddedView(
         this.templateRef
       );
-      console.log(embViewRef.rootNodes);
       const firstRootNode = embViewRef.rootNodes[0];
       const componentRef = this.viewContainerRef.createComponent(
         this.components[this.document.docType]

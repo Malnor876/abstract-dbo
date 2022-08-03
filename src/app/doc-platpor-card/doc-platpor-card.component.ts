@@ -1,16 +1,89 @@
-import { Component, OnInit } from '@angular/core';
-import { IBaseCard } from '../document-card.directive';
-import { DocumentResponseTypes } from '../models/document.model';
+import { Component } from '@angular/core';
+import {
+  DocumentResponseTypes,
+  EDocModule,
+  EDocType,
+} from '../models/document.model';
+import { IDocPlatporResponse } from '../models/doc_platpor.model';
+import { IDocPlatporCurrResponse } from '../models/doc_platpor_curr.model';
+import { IBaseCard } from '../services/document-card.directive';
 
 @Component({
   selector: 'app-doc-platpor-card',
   templateUrl: './doc-platpor-card.component.html',
   styleUrls: ['./doc-platpor-card.component.scss'],
 })
-export class DocPlatporCardComponent implements OnInit, IBaseCard {
+export class DocPlatporCardComponent implements IBaseCard {
   constructor() {}
 
-  ngOnInit(): void {}
-
-  document: any;
+  document: IDocPlatporResponse = {
+    docType: EDocType.Platpor,
+    docModule: EDocModule.IBank_Ul,
+    corrAccNumber: '',
+    clientId: '',
+    clientRef: '',
+    fullname: '',
+    inn: '',
+    kpp: '',
+    accConto: '',
+    accCurr: '',
+    accCurrIso: '',
+    accId: '',
+    accNumber: '',
+    accType: '',
+    agreeRules: '',
+    amount: '',
+    amountAll: '',
+    amountInWords: '',
+    bankBik: '',
+    bankCorrAccount: '',
+    bankName: '',
+    bankPlace: '',
+    branchId: '',
+    corrAccCurr: '',
+    corrAccCurrIso: '',
+    corrBankBik: '',
+    corrBankCorrAccount: '',
+    corrBankName: '',
+    corrBankPlace: '',
+    corrFullname: '',
+    corrInn: '',
+    currCode: '',
+    currCodeIso: '',
+    description: '',
+    bankrupt: '',
+    branchTimezone: '',
+    changeStampClient: new Date(),
+    corrBankId: '',
+    corrType: '',
+    createStampClient: new Date(),
+    descriptionFull: '',
+    isAllowedContoForUin: '',
+    isAllowedZeroInKbk: '',
+    isAvailableUin: '',
+    isClientConsolidateGroup: '',
+    isContoInKboContoList: '',
+    isFederalTreasuryDepPayment: '',
+    isInRevenueTypeContoList: '',
+    isLimitRecepientsMoney: '',
+    isTransferToNonresidentBank: '',
+    ndsText: '',
+    ndsTypeId: '',
+    opertype: '',
+    payNalogCorr: '',
+    sendtype: '',
+    sendtypeCaption: '',
+    subCorrTypeUl: '',
+    urgenttype: '',
+    '@type': '',
+    signStatus: '0',
+    id: '',
+    signStatusCaption: '',
+    status: '',
+    statusCaption: '',
+    docDate: '',
+    docNumber: '',
+    changeStamp: new Date(),
+    createStamp: new Date(),
+  };
 }

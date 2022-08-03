@@ -1,1 +1,5 @@
 <!-- <div *ngFor="let document of documents$ | async" documentCard></div> -->
+<app-document-card
+  *ngFor="let documentWithActions of documentsWithActions"
+  [documentWithActions]="documentWithActions"
+></app-document-card>
